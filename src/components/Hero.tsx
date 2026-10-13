@@ -1,3 +1,5 @@
+import Button from "@/components/ui/Button"
+
 export default function Hero() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-24 text-center">
@@ -8,12 +10,12 @@ export default function Hero() {
         بهترین کتاب‌ها با بهترین قیمت، ارسال سریع به سراسر کشور.
       </p>
       <div className="mt-10 flex gap-4 justify-center">
-        <button className="px-8 py-3 bg-violet-600 text-white rounded-lg font-medium hover:bg-violet-700 transition-colors">
+        <Button variant="primary" size="lg">
           مشاهده محصولات
-        </button>
-        <button className="px-8 py-3 bg-white text-slate-700 border border-slate-300 rounded-lg font-medium hover:bg-slate-50 transition-colors">
+        </Button>
+        <Button variant="outline" size="lg">
           تماس با ما
-        </button>
+        </Button>
       </div>
     </section>
   )
