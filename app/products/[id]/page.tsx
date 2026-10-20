@@ -2,6 +2,7 @@ import { getProductById, products } from "@/lib/products"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import Button from "@/components/ui/Button"
+import AddToCartButton from "@/components/AddToCartButton"
 
 type Props = {
   params: Promise<{ id: string }>
@@ -54,9 +55,7 @@ export default async function ProductPage({ params }: Props) {
                 {product.price.toLocaleString("fa-IR")} تومان
               </p>
               <div className="mt-6 flex gap-3">
-                <Button variant="primary" size="lg">
-                  افزودن به سبد خرید
-                </Button>
+                <AddToCartButton product={product} />
                 <Button variant="outline" size="lg">
                   علاقه‌مندی
                 </Button>
